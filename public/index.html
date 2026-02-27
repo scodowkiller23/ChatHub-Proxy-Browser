@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatHub Proxy Browser</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo-area">
+      <span class="logo-icon">&#9889;</span>
+      <h1 class="logo-title">ChatHub Proxy Browser</h1>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+      <span id="themeIcon">&#9728;&#65039;</span>
+    </button>
+  </div>
+  <div class="tabbar" id="tabbar">
+    <button class="tab-new-btn" id="newTabBtn" title="Nueva pestana">+</button>
+  </div>
+  <div class="browser-chrome">
+    <div class="nav-buttons">
+      <button class="nav-btn" id="backBtn" title="Atras">&#8592;</button>
+      <button class="nav-btn" id="fwdBtn" title="Adelante">&#8594;</button>
+      <button class="nav-btn" id="reloadBtn" title="Recargar">&#8635;</button>
+      <button class="nav-btn" id="homeBtn" title="Inicio">&#8962;</button>
+    </div>
+    <div class="urlbar-wrap">
+      <span class="secure-icon" title="Cifrado extremo a extremo">&#128274;</span>
+      <input type="text" class="urlbar" id="urlbar" placeholder="Introduce una URL o busca..." autocomplete="off" spellcheck="false"/>
+      <button class="go-btn" id="goBtn">Ir</button>
+    </div>
+    <div class="badge-secure">&#128737;&#65039; Cifrado &amp; Inbloqueable</div>
+  </div>
+  <div class="viewport-area" id="viewportArea">
+    <div class="homepage" id="homepage">
+      <div class="home-hero">
+        <div class="shield-big">&#128272;</div>
+        <h2 class="home-title">Navega sin limites</h2>
+        <p class="home-sub">Tus busquedas viajan <strong>cifradas</strong> y son <strong>inbloqueables</strong>.<br/>Ningun proxy de red puede interceptar tu trafico.</p>
+        <div class="home-search-wrap">
+          <input type="text" class="home-search" id="homeSearch" placeholder="Busca o introduce una URL..." autocomplete="off"/>
+          <button class="home-go-btn" id="homeGoBtn">Buscar</button>
+        </div>
+        <div class="quick-links">
+          <span class="ql-label">Accesos rapidos</span>
+          <div class="ql-grid">
+            <button class="ql-btn" data-url="https://duckduckgo.com">&#128269; DuckDuckGo</button>
+            <button class="ql-btn" data-url="https://www.youtube.com">&#9654;&#65039; YouTube</button>
+            <button class="ql-btn" data-url="https://www.wikipedia.org">&#128218; Wikipedia</button>
+            <button class="ql-btn" data-url="https://www.github.com">&#128057; GitHub</button>
+            <button class="ql-btn" data-url="https://www.reddit.com">&#129302; Reddit</button>
+            <button class="ql-btn" data-url="https://www.x.com">&#120143; Twitter/X</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe id="proxyFrame" class="proxy-frame hidden"></iframe>
+    <div class="loading-overlay hidden" id="loadingOverlay">
+      <div class="spinner"></div>
+      <p>Cargando de forma segura...</p>
+    </div>
+  </div>
+  <div class="statusbar">
+    <span id="statusText">&#9989; Listo</span>
+    <span class="statusbar-right">ChatHub Proxy Browser v1.0 &nbsp;|&nbsp; &#128274; TLS/HTTPS</span>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
